@@ -38,8 +38,24 @@ LIBARYS="/usr/share/libarys"
 GPIO_LIBARYS="/usr/share/libarys/gpio"
 WIRINGPI_LIBRARYS="/usr/share/libarys/wiringpi"
 
+# Dependencies
+packages=("curl wget git make cmake software-properties-common python3-dev python3-pip python3-venv build-essential pkg-config automake autoconf clang libc6-dev gcc")
+
 # Function to check if a package is installed
 is_installed() {
     dpkg -s "$1" >/dev/null 2>&1
     return $?
+}
+
+
+install_dependencies() {
+    echo -e "${YELLOW}Installing dependencies...${NC}"
+    $u
+    $ug
+    $dug
+    $ar
+    $ac
+
+    $i 
+
 }
